@@ -1,0 +1,35 @@
+fill(0, 0, 200);
+var num = 1;  
+var calOutput = function (num) { 
+    if(num > 0 && num < 3) { 
+        var totalOutput = 3 * num; 
+       println("The total Output is" + totalOutput); 
+        return totalOutput; 
+    } 
+     
+    if(num > 4 && num < 6) { 
+        var totalOutput = 2 + num;  
+        println("The total Output is" + totalOutput); 
+        return totalOutput; 
+    } 
+     
+    if(theNumber > 7 && theNumber < 10) { 
+        var totalOutput = 2 * theNumber; 
+        println("The total Output is" + totalOutput); 
+        return totalOutput; 
+    } 
+     
+    if(num < 0) { 
+        var totalOutput = num - num; 
+        println("The total Output is" + totalOutput); 
+        return totalOutput; 
+    } 
+     
+      else { 
+        var totalOutput = 1;
+        println("The total Output is" + totalOutput); 
+        return totalOutput; 
+    } 
+     
+}; 
+// for -3, 0, 5 or 40, just change num
