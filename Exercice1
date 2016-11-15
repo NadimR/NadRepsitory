@@ -1,0 +1,118 @@
+<html>
+<head>
+
+	<script>
+	   function writeDay() {
+	       var dropday = document.getElementById("dropDay");
+	       document.getElementById("day").innerHTML = dropday.options[dropday.selectedIndex].text;
+	   }
+	   function writeAge() {
+	     var textage = document.getElementById('textAge').value;
+	       document.getElementById('age').innerHTML = textage;
+	   }
+	   function Calculate() {
+	       if (dropDay.value === "A") {
+	           var agecheck = document.getElementById('textAge').value;
+	           if (agecheck <= 35) {
+	               var price1 = 2;
+	               document.getElementById("pricevalue").innerHTML = price1;
+	           } else {
+	               var price2 = 5;
+	               document.getElementById("pricevalue").innerHTML = price2;
+	           }
+	       } else if (dropDay.value === "B") {
+	         var agecheck = document.getElementById('textAge').value;
+	         if (agecheck <= 25) {
+	             var price3 = 2;
+	             document.getElementById("pricevalue").innerHTML = price3;
+	         } else if (25 < agecheck && agecheck <= 50){
+	             var price4 = 5;
+	             document.getElementById("pricevalue").innerHTML = price4;
+	         } else {
+	           var price5 = 7;
+	           document.getElementById("pricevalue").innerHTML = price5;
+	         }
+	       } else if (dropDay.value === "C") {
+	         var agecheck = document.getElementById('textAge').value;
+	         if (agecheck < 18) {
+	             var price6 = 3;
+	             document.getElementById("pricevalue").innerHTML = price6;
+	         } else if (18 <= agecheck && agecheck <= 50){
+	             var price7 = 5;
+	             document.getElementById("pricevalue").innerHTML = price7;
+	         } else {
+	           var price8 = 8;
+	           document.getElementById("pricevalue").innerHTML = price8;
+	         }
+	       } else if (dropDay.value === "D") {
+	         var agecheck = document.getElementById('textAge').value;
+	         if (agecheck < 18) {
+	             var price9 = 5;
+	             document.getElementById("pricevalue").innerHTML = price9;
+	         } else{
+	             var price10 = 7;
+	             document.getElementById("pricevalue").innerHTML = price10;
+	        }
+	     }else{
+	       var price11 = 10;
+	       document.getElementById("pricevalue").innerHTML = price11;
+	     }
+	}
+	</script>
+
+
+</head>
+<center>
+<body>
+	<p>Your choices:</p>
+
+
+	<p>Day options:</p>
+
+
+	<div>
+		<select id="dropDay" onchange="writeDay()">
+			<option disabled selected>
+				Choose the day
+			</option>
+
+			<option value="A">
+				Monday
+			</option>
+
+			<option value="B">
+				Tuesday
+			</option>
+
+			<option value="C">
+				Wednesday
+			</option>
+
+			<option value="D">
+				Thursday
+			</option>
+
+			<option value="E">
+				Friday and Weekend
+			</option>
+		</select>
+	</div>
+
+
+	<p>Age options:</p>
+
+
+	<form>
+		<input id='textAge' onblur="writeAge()" placeholder="Your age" type='number'>
+	</form>
+
+
+	<p>You want to come on <span id="day"></span> and your age is <span id='age'></span>.<br>
+	<br>
+	<input onclick='Calculate()' type='button' value='!Calculate the price of your ticket!'></p>
+
+
+	<p>One ticket will cost you : <span id="pricevalue"></span> $</p>
+</center>
+</body>
+</html>
