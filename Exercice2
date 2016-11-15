@@ -1,0 +1,28 @@
+fill(0, 0, 200); 
+var num1 = 20; 
+var num2 = 10; 
+var variableOperation = 2; 
+var add = function(num1, num2)
+if(variableOperation = 2) { 
+        text("20 + 10 = " + add(20,10), 50, 20); 
+        return num1 + num2; 
+    } 
+} 
+if(variableOperation = 2) { 
+    var subtract = function(num1, num2){ 
+        text("20 - 10 = " + subtract(20,10), 50, 40); 
+        return num1 - num2; 
+    } 
+} 
+if(variableOperation = 3) { 
+    var multiply = function(num1, num2){ 
+        text("20 * 10 = " + multiply(20,10), 50, 60); 
+        return num1 * num2; 
+    } 
+} 
+if(variableOperation = 4) { 
+    var divide = function(num1, num2){ 
+        text("20 / 10 = " + divide(20,10), 50, 80); 
+        return num1 / num2; 
+    } 
+} 
